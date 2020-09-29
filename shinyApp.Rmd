@@ -1,0 +1,40 @@
+---
+title: "Course Project: Shiny Application and Reproducible Pitch - Miles Per Gallon"
+author: "Weiying"
+date: "9/26/2020"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This peer assessed assignment has two parts. First, you will create a Shiny application and deploy it on Rstudio's servers. Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+The Shiny application is based on the mtcars (Motor Trend Car Road Tests) data. The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). This application analyzed the MPG (miles pe gallon) data v.s. the specific variable selected. One variable at a time.
+
+## Slide with Bullets
+
+- The Shiny application is running on
+https://weiying.shinyapps.io/ShinyApp/
+
+- The Shiny ui.R and server.R files are published in the github repository
+https://github.com/wyZHANG215/ShinyApp
+
+## Data summary
+```{r mtcars, echo = TRUE}
+summary(mtcars)
+```
+
+## Slide with Plot
+```{r plot}
+par(mfrow=c(2,3))
+boxplot(mpg ~ cyl, data = mtcars, outline = TRUE)
+boxplot(mpg ~ am, data = mtcars, outline = TRUE)
+boxplot(mpg ~ gear, data = mtcars, outline = TRUE)
+boxplot(mpg ~ vs, data = mtcars, outline = TRUE)
+boxplot(mpg ~ hp, data = mtcars, outline = TRUE)
+```
+
